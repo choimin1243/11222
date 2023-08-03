@@ -3,11 +3,9 @@ from typing import Optional
 from fastapi import FastAPI, Path, Query, HTTPException
 from pydantic import BaseModel, Field
 from starlette import status
-from mangum import Mangum
 
 
 app = FastAPI()
-handler=Mangum(app)
 
 class Book:
     id: int
